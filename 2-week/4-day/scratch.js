@@ -1,49 +1,53 @@
-let s = 'This is a string';
-console.log(typeof s);    // 'string'
+// let s = 'This is a string';
+// console.log(typeof s);    // 'string'
+// console.log(s typeof)
 
-let n = 6.28;
-console.log(typeof n);    // 'number'
+// let n = 6.28;
+// console.log(typeof n);    // 'number'
 
-let sum = function (a, b) {
-  return a + b;
-}
-console.log(typeof sum);  // 'function'
+// let sum = function (a, b) {
+//   return a + b;
+// }
+// console.log(typeof sum);  // 'function'
 
 // let a = [1, 2, 3];
 // console.log(typeof a);  // 'object'
 
 
 // let a = [1, 2, 3];
-// Array.isArray(a);  // true
+// console.log(Array.isArray(a));  // true
 
 // let n = 6.28;
-// Array.isArray(n);  // false
+// console.log(Array.isArray(n));  // false
 
 // let f = function () {}
-// Array.isArray(f);  // false
+// console.log(Array.isArray(f));  // false
 
 
-// // Useless code.
+// Useless code.
 // console.log(typeof null);  // 'object'
 
 
 // let a = [];
 // let x = null;
 
+
 // if (a === null) {
 //   console.log('a is null');
 // } else if (x === null) {
 //   console.log('x is null');
 // }
+// let value
 
-
-// // Test if a value is undefined
+// // // Test if a value is undefined
 // if (value === undefined) {
 //     // do a thing
+//     console.log('something')
 //   }
   
 //   // You can also do it this way, but
 //   // it is considered passé.
 //   if (typeof value === 'undefined') {
 //     // do a thing
+//     console.log('something')
 //   }
