@@ -1,6 +1,7 @@
-// let s = 'This is a string';
-// console.log(typeof s);    // 'string'
+let s = 'This is a string';
+console.log(typeof s);    // 'string'
 // console.log(s typeof)
+if(typeof s === 'string') console.log(s)
 
 // let n = 6.28;
 // console.log(typeof n);    // 'number'
