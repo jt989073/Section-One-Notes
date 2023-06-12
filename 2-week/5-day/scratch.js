@@ -13,26 +13,25 @@ check if the element is butter, eggs, milk, or cheese
 return our total
 */
 
-
-function costOfGroceries(groceries) {
-    // Your code here
-	let total = 0
-    for(let i = 0; i < groceries.length; i++){
-    	let ele = groceries[i]
-        if(ele === 'butter'){
-        	total += 1
-        } else if(ele === 'eggs'){
-        	total += 2
-        } else if (ele === 'milk'){
-        	total += 3
-        } else if (ele === 'bread'){
-        	total += 4
-        } else if (ele === 'cheese'){
-        	total += 5
-        }
-    }
-  return total
-}
+// function costOfGroceries(groceries) {
+//   // Your code here
+//   let total = 0;
+//   for (let i = 0; i < groceries.length; i++) {
+//     let ele = groceries[i];
+//     if (ele === "butter") {
+//       total += 1;
+//     } else if (ele === "eggs") {
+//       total += 2;
+//     } else if (ele === "milk") {
+//       total += 3;
+//     } else if (ele === "bread") {
+//       total += 4;
+//     } else if (ele === "cheese") {
+//       total += 5;
+//     }
+//   }
+//   return total;
+// }
 
 /* 
 create a highestSum variable that will keep track of highest sum
@@ -45,54 +44,52 @@ loop over our outter array
             reassign our highest index to curreent index
 */
 
+// function mostExpensiveGroceries(arr) {
+//   // Your code here
+//   let highestSum = -Infinity;
+//   let highestIndex = -1;
+//   for (let i = 0; i < arr.length; i++) {
+//     let subArr = arr[i];
+//     let currTotal = costOfGroceries(subArr);
+//     if (currTotal > highestSum) {
+//       highestSum = currTotal;
 
-function mostExpensiveGroceries(arr) {
-    // Your code here
-  let highestSum = -Infinity
-  let highestIndex = -1
-  for(let i = 0; i < arr.length; i++){
-  	let subArr = arr[i]
-    let currTotal = costOfGroceries(subArr)
-    if(currTotal > highestSum){
-    	highestSum = currTotal
-  
-        highestIndex = i
-    }
-  }
-  return highestIndex
-}
+//       highestIndex = i;
+//     }
+//   }
+//   return highestIndex;
+// }
 
+// // TESTS
+// // DO NOT MODIFY ANYTHING BELOW THIS LINE
 
-// TESTS
-// DO NOT MODIFY ANYTHING BELOW THIS LINE
+// const groceriesA = ["cheese", "butter", "eggs"];
+// const groceriesB = ["eggs", "milk", "bread", "bread"];
+// const groceriesC = ["cheese", "bread"];
+// const groceriesD = ["eggs", "butter"];
 
-const groceriesA = ['cheese', 'butter', 'eggs'];
-const groceriesB = ['eggs', 'milk', 'bread', 'bread'];
-const groceriesC = ['cheese', 'bread'];
-const groceriesD = ['eggs', 'butter'];
+// costOfGroceries(groceriesA); // 8
+// costOfGroceries(groceriesB); // 13
+// costOfGroceries(groceriesC); // 9
+// costOfGroceries(groceriesD); // 3
 
-costOfGroceries(groceriesA);  // 8
-costOfGroceries(groceriesB);  // 13
-costOfGroceries(groceriesC);  // 9
-costOfGroceries(groceriesD);  // 3
+// mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]);
 
-mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]);
+// let score = 0;
 
-let score = 0;
+// if (costOfGroceries(groceriesA) === 8) score++;
+// if (costOfGroceries(groceriesB) === 13) score++;
+// if (costOfGroceries(groceriesC) === 9) score++;
+// if (costOfGroceries(groceriesD) === 3) score++;
 
-if (costOfGroceries(groceriesA) === 8) score++;
-if (costOfGroceries(groceriesB) === 13) score++;
-if (costOfGroceries(groceriesC) === 9) score++;
-if (costOfGroceries(groceriesD) === 3) score++;
+// if (
+//   mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]) === 1
+// )
+//   score++;
+// if (mostExpensiveGroceries([groceriesA, groceriesD]) === 0) score++;
+// if (mostExpensiveGroceries([groceriesA, groceriesD, groceriesC]) === 2) score++;
 
-if (mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]) === 1) score++;
-if (mostExpensiveGroceries([groceriesA, groceriesD]) === 0) score++;
-if (mostExpensiveGroceries([groceriesA, groceriesD, groceriesC]) === 2) score++;
-
-console.log("You have scored " + score + "/7 points.");
-
-
-
+// console.log("You have scored " + score + "/7 points.");
 
 /* 
 check if our operation is capitalize
@@ -110,7 +107,6 @@ reverse
 		concat each letter to the newString
     return the word
 */
-
 
 // function stringChanger(word, operation) {
 //     // Your code here
@@ -147,9 +143,6 @@ reverse
 
 // console.log("You have scored " + score + "/5 points.");
 
-
-
-
 // function isSorted(nums) {
 
 //     // Loop through each number
@@ -172,3 +165,50 @@ reverse
 // console.log(isSorted([1, 2, 3, 4, 5]))  // true
 // console.log(isSorted([2, 2, 4, 4]))  // true
 // console.log(isSorted([1, 2, 4, 3, 5, 6]))  // false
+
+
+
+// TESTS // DO NOT MODIFY ANYTHING BELOW THIS LINE
+// let score = 0;
+// if (operate(456, 123, "greater than") === true) score++;
+// if (operate(654, 654, "less than") === false) score++;
+// if (operate(99, 3, "equal to") === false) score++;
+// if (operate(111, 3, "not equal to") === true) score++;
+// if (operate(42, 42, "opposite to") === "Invalid Operation") score++;
+// console.log("You have scored " + score + "/5 points.");
+
+
+// function getProduct(nums) { let product = 1; for (let i = 0; i < nums.length; i++) { product *= nums[i] } return product; } function highestProduct(numsList) { let product = 1; let index = 0; for (let i = 0; i < numsList.length; i++) { if (getProduct(numsList[i]) > product) { product = getProduct(numsList[i]); index = i; } } return index; } 
+
+
+// TESTS // DO NOT MODIFY ANYTHING BELOW THIS LINE 
+// const arrayA = [1, 2, 3, 4, 5]; const arrayB = [3, 7]; const arrayC = [20, 100, 1, 2]; const arrayD = [1, 3, 2, 300]; let score = 0; if (getProduct(arrayA) === 120) score++; if (getProduct(arrayB) === 21) score++; if (getProduct(arrayC) === 4000) score++; if (getProduct(arrayD) === 1800) score++; if (highestProduct([arrayA, arrayB, arrayC, arrayD]) === 2) score++; if (highestProduct([arrayA, arrayB]) === 0) score++; if (highestProduct([arrayA, arrayD]) === 1) score++; console.log("You have scored " + score + "/7 points.");
+
+
+
+function multiplesOfSeven(num) {
+     let arr = [];
+      for (let i = num; i > 0; i--) { 
+        if (i % 7 === 0) { 
+            arr.unshift(i);
+         }
+         } 
+         return arr; 
+        } 
+        // Expected return values 
+        // console.log(multiplesOfSeven(85)); // [ 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84] 
+        // console.log(multiplesOfSeven(15)); // [ 7, 14 ] 
+        // console.log(multiplesOfSeven(7)); // [ 7 ] 
+        // console.log(multiplesOfSeven(1)); // [] /* SCORING: DO NOT MODIFY ANYTHING BELOW THIS LINE */
+ let score = 0; 
+ const arrComparison = function(arr1, arr2) { 
+    if (arr1.length !== arr2.length) return false; 
+    let i = 0;
+     while (i < arr1.length) { 
+        if (arr1[i] !== arr2[i]) return false; 
+        i++; } return true; }
+         if (arrComparison(multiplesOfSeven(85), [ 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84])) score++; 
+         if (arrComparison(multiplesOfSeven(15), [ 7, 14 ])) score++; 
+         if (arrComparison(multiplesOfSeven(7), [ 7 ])) score++; 
+         if (arrComparison(multiplesOfSeven(1), [])) score++; 
+         console.log("You have scored " + score + "/4 points.");
