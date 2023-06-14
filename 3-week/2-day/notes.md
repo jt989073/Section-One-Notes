@@ -97,17 +97,18 @@ In JavaScript, fat arrow functions, also known as arrow functions, provide a con
 ## Syntax
 The syntax for a fat arrow function is as follows:
 
-```javascript
+```js
 let functionName = (param1, param2) => {
   // Function body
 };
-The function name is optional, and the parameters are enclosed in parentheses. The fat arrow => separates the parameter list from the function body, which is enclosed in curly braces {}.
 ```
+The function name is optional, and the parameters are enclosed in parentheses. The fat arrow => separates the parameter list from the function body, which is enclosed in curly braces {}.
+
 
 Example: Basic Fat Arrow Function
 Let's start with a basic example:
 
-```
+```js
 const greet = () => {
   console.log("Hello, world!");
 };
