@@ -20,11 +20,11 @@
 ### Array Destructuring
 
   ```js
-    // let arr = ["Rocket League", "James", "Radahn"];
+    // let arr = ["Rocket League", "James",];
     // let game = arr[0]
     // let player = arr[1]
 
-    let [game, player] = ['Rocket League', 'Zaviar'];
+    let [game, player] = ['Rocket League', 'James'];
     console.log('game:', game);
     console.log('player:', player);
 
@@ -69,7 +69,7 @@
   console.log(obj3);
   console.log(obj4);
   
-  obj1.name = 'Crystal';
+  obj1.name = 'Gabe';
   
   console.log(obj3);
   console.log(obj4);
