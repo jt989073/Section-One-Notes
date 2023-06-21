@@ -29,11 +29,33 @@ let cipher2 = {
 };
 console.log(suffixCipher('incremental progress is very instrumental', cipher2));
 // INCREMENTAL progressth isth very INSTRUMENTAL
+
+
+split our sentence into an array
+create a new array variable
+loop over our array
+  grab each word
+  loop over our object
+    if our word ends with the key of our object
+      grab the value of that key which is the call back
+      add that word into a new array
+    if it does not we just add our word into the array
+join our new array
 *******************************************************************************/
 
 function suffixCipher(sentence, cipher) {
   let words = sentence.split(" ");
-  let newWords = words.map(function(word) {
+  // let newArr = []
+  //  for(let i = 0; i < words.length; i++){
+  //   let word = words[i]
+  //   for(let suffix in cipher){
+  //     if(word.endsWith(suffix)){
+  //       let cb = cipher[suffix]
+  //       words[i] = cb(word)
+  //     }
+  //   }
+  //  }
+  let newArr = words.map((word) => {
     for (let suffix in cipher) {
       if (word.endsWith(suffix)) {
         let cb = cipher[suffix];
@@ -42,12 +64,34 @@ function suffixCipher(sentence, cipher) {
     }
     return word;
   });
-  return newWords.join(" ");
+  return newArr.join(" ");
 }
 
+
+let cipher1 = {
+  ly: function (word) {
+    return word.slice(0, -1) + "ee";
+  },
+  ize: function (word) {
+    return word + "r";
+  },
+};
+console.log(suffixCipher("quietly and gently visualize", cipher1));
+// quietlee and gentlee visualizer
+
+let cipher2 = {
+  tal: function (word) {
+    return word.toUpperCase();
+  },
+  s: function (word) {
+    return word + "th";
+  },
+};
+console.log(suffixCipher("incremental progress is very instrumental", cipher2));
+// INCREMENTAL progressth isth very INSTRUMENTAL
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = suffixCipher;
-} catch(e) {
+} catch (e) {
   return null;
 }
