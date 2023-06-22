@@ -61,9 +61,21 @@
   
 //   console.log(someFunc('some func sentence'))
 
-var zoo = "panda";
+// var zoo = "panda";
 
-if (true) {
-  console.log(zoo);
-  let zoo = "lion";
-}
+// if (true) {
+//   console.log(zoo);
+//   let zoo = "lion";
+// }
+
+// function dogParty() {
+//   if (true) {
+//     let dog = "Rupert";
+//     const dog = "Fluffy";
+//     var dog = "Poodle";
+//   }
+
+//   return dog;
+// }
+
+// dogParty(); // ??? errrorrrrr dog has been declared
