@@ -48,15 +48,22 @@
 
 // console.log(addFiveNewArr([1,2,3,4]))
 
-const someFunc = (sentence) => {
-    console.log(count) // count is in the temporal dead zone
+// const someFunc = (sentence) => {
+//     console.log(count) // count is in the temporal dead zone
   
-    let count = 0
-    if(sentence.length){
-        count = sentence.length
-    }
+//     let count = 0
+//     if(sentence.length){
+//         count = sentence.length
+//     }
   
-    return count
-  }
+//     return count
+//   }
   
-  console.log(someFunc('some func sentence'))
+//   console.log(someFunc('some func sentence'))
+
+var zoo = "panda";
+
+if (true) {
+  console.log(zoo);
+  let zoo = "lion";
+}
