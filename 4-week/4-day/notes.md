@@ -5,8 +5,33 @@ in an outer function.
 
 `Overview`
 
+- Closures have access to any variables within its own, as well as any outer function's, scope when they are declared. This is where the lexical environment comes in - the lexical environment consists of any variables available within the scope in which the closure was declared (which are the local inner scope, outer function's scope, and global scope).
+- A closure will keep reference to all the variables when it was defined even if the outer function has returned.
+
 - We can use/manipulate a Higher Order Functions' variables/parameters with a closure
 - We can create multiple "instances" of a function's variables with closures
+- Private state is a huge thing in the SWE world. We want to hide information as much as we can. We use closures a lot to create a private state
+
+
+```js
+function createCounter() {
+  let count = 0;
+
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+let counter = createCounter();
+console.log(counter()); // => 1
+console.log(counter()); // => 2
+
+//we cannot reach the count variable!
+counter.count; // undefined
+let counter2 = createCounter();
+console.log(counter2()); // => 1
+```
 
 - Prompt
 
