@@ -35,12 +35,16 @@ function countDownTimer(num) {
     if (num <= 0) {
       return "Happy New Year!";
     } else {
-      return _count;
+      // return _count;
     }
   };
   return _count;
 }
 
+let threeDays = countDownTimer(3); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // prints "Happy New Year!"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
