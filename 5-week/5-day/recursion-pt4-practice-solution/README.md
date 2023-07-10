@@ -14,5 +14,4 @@ and `test/` directories. Once there, run the following command:
 ```
 
 Having trouble? Reach out to a TA for assistance!
-
 We know you've got this!
