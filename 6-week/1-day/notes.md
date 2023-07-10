@@ -1,4 +1,4 @@
-# W6D2 - Async
+# W6D1 - Async
 
 JavaScript is a single threaded language that can be non-blocking.
 
