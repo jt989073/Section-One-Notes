@@ -17,6 +17,8 @@
   with the file system can only be utilized in node, not the browser.
 
 
+[ReadLine docs](https://nodejs.org/api/readline.html#readline_readline)
+
 ```js
 // import the readline module into our file
 const readline = require('readline')
