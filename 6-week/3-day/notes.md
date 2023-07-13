@@ -1,6 +1,5 @@
 # M1W6D3
 
-## Readings(25 min)
 
 ## Node/Readline
 
