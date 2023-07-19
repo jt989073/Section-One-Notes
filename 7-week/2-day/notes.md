@@ -18,5 +18,4 @@ DRY, also known as the DRY principle, is a software development principle that p
 
 - **Maintenance**: Changes or bug fixes need to be applied in one place only, reducing the chances of errors due to inconsistent code.
 
-- **Consistency**: DRY encourages consistent implementations, making the code easier to understand and follow.Reduced Code Size: By eliminating duplication, the codebase becomes smaller and more concise.
-
+- **Consistency**: DRY encourages consistent implementations, making the code easier to understand and follow.
