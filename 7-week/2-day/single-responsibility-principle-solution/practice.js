@@ -71,14 +71,10 @@ const sellPies = (costOfPie, pieQuantity, profitMargin) => {
 
 function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
   // Find the recipe for the pieType specified
-
-  // Bake the number of pies specified by the pieQuantity
-
+  // Bake the number of pies specifie by the pieQuantity
   bakePies(pieType, pieQuantity)
-
   // Print the cost of each pie based on the cost of each ingredient
   const costOfPie = pieCost(pieType)
-
   // Calculate the total cost of all the pies
   sellPies(costOfPie, pieQuantity, profitMargin)
 }
