@@ -65,7 +65,6 @@ Helper Methods: They can also serve as helper methods that aid in class-related 
 
 Math Library: In the Math library, methods such as Math.sqrt() are static methods, as they don't require an instance of the Math class.
 
-Conclusion
 
 
 ## Types of Polymorphism
