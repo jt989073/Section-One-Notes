@@ -57,6 +57,8 @@ class Instrument {
     console.log('toot toot toot');
   }
 }
+
+
   class Guitar extends Instrument {
     constructor() {
       Guitar.total += 1;
