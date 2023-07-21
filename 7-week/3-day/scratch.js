@@ -66,17 +66,15 @@ class Trumpet extends Instrument {
   }
 }
 
-// const myGuitar = new Guitar("fender");
-// const myTrumpet = new Trumpet("some trumpet");
+const myGuitar = new Guitar("fender");
+const myTrumpet = new Trumpet("some trumpet");
 // myTrumpet.playTrumpet();
 // myTrumpet.play();
 // myTrumpet.strumGuitar();
 // console.log(myGuitar)
 // myGuitar.strumGuitar()
 // myGuitar.play()
+console.log(myGuitar)
 
-const arr = [1,2,3,4]
-arr.something = (something) => {console.log(something)}
 
-arr.something('something else')
 
