@@ -17,21 +17,21 @@
 
 - Some questions to start us off...
   - Why can't we effectively use 'time' to test the efficiency of our code?
-    - 
+    - there are too many outside factors other than just the code, ie machine speed, weather, temperature of our machine
   - What is Big-O notation concerned with?
     - Best, average or worst case?
-      - 
+      - worst case usually.
     - Specific tests run or general trend of many tests run?
-      - 
+      - we always want to test our code multiple times and read through said code multiple times to determine our worst, best and average.
     - Tests with similar sizes, or tests with different sizes?
-      - 
+      - different sizes we want to try to think about all of the different scenarios, and applications of our code
     - What are the three complexities we read about?
-      - 
-      - 
-      - 
+      - constant
+      - linear
+      - quadratic
     - So... what is Big-O?
-      - 
-      - 
+      - testing to make sure your code is time effecient and uses the least ammount of processing power --Joseph
+      - standard mathematical notation that shows how effecient an algorithm. this includes the speed at which it runs and the space in memory that it takes up. 
 
 ## Simplifying Big-O
 
@@ -39,9 +39,9 @@
   - n is going to affect the trend MUCH more than a constant number.
 
     ```text
-      5n => On
-      2n^2 => On^2
-      5 => O1
+      5n => O(n)
+      2n^2 => O(n^2)
+      5 => O(1)
     ```
 
 - We can remove the smaller complexity when using addition
