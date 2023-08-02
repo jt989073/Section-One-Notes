@@ -12,21 +12,22 @@
 
 - Some questions to start us off...
   - Why can't we effectively use 'time' to test the efficiency of our code?
-    - 
+    - Many variables affect what happens on our machine and how fast it runs things. ie RAM, weather, computer temperature, all kinds of things
   - What is Big-O notation concerned with?
     - Best, average or worst case?
-      - 
+      - worst case scenarios are what we care about when looking into big O
     - Specific tests run or general trend of many tests run?
-      - 
+      - we are moree concerned with a general trend of many tests
     - Tests with similar sizes, or tests with different sizes?
-      - 
+      - different sizes because we want to think about all different applications when we run a program
     - What are the three complexities we read about?
-      - 
-      - 
-      - 
+      - constant -> O(1)
+      - linear -> O(n)
+      - quadratic -> O(n ^ 2)
     - So... what is Big-O?
-      - 
-      - 
+      - growth curve, basically how the programs effeciency runs over time
+      - standard mathematical notation to show how effecient a algorithm runs. 
+
 
 ## Simplifying Big-O
 
@@ -34,9 +35,9 @@
   - n is going to affect the trend MUCH more than a constant number.
 
     ```text
-      5n => 
-      2n^2 => 
-      5 => 
+      5n => O(n)
+      2n^2 => O(n^2)
+      5 => O(1)
     ```
 
 - We can remove the smaller complexity when using addition
