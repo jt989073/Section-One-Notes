@@ -132,7 +132,7 @@ console.log('Time complexity: O(1)');
 console.log('\n');
 
 
-// /**************************** Testing enumerables ****************************/
+/**************************** Testing enumerables ****************************/
 // Write testing functions here for map, filter, reduce, every, and other
 // enumerables for Array's.
 // Remember to write a hypothesis for the time complexity for each enumerable
