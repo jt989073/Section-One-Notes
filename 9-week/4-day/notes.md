@@ -1,30 +1,8 @@
-# M2W3D3
+# M2W3D4
 
 ## Binary Practice (15 min)
 
 ## Lecture Part 1
-
-
-- ! = not
-- && = both conditions are true
-- || = one or both conditions are true
-- XOR ( ^ ) = exclusive or, one is true, but not both
-
-- True can be represented by 1, and false by 0.
-
-- De Morgan's Law:
-  !(A && B) === !A || !B
-
-```plaintext
-A | B XOR
------
-T | T  => F
-T | F  => T
-F | T  => T
-F | F  => F
-```
-
-
 ### Base 10 - "Normal"
 
 
@@ -90,14 +68,13 @@ Add all of those sums together to get 2 + 8 + 64 + 128 = 202
 ## Write a javascript function that converts Binary to Decimal
 
 ---
-=======
+
 
 Add all of those sums together to get 2 + 8 + 64 + 128 = 202
 
 ## Write a javascript function that converts Binary to Decimal (20 min)
 
 ## Lecture Part 2
->>>>>>> 068e39f9864dacf5a348aadb94b67acf4110ead6
 
 ### Base 16 - Hexadecimal
 
@@ -228,3 +205,4 @@ let str = Number(num).toString(16);  // 'a1'
 
 
 ## Binary Extra Practice
+ 
