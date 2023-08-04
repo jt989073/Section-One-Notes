@@ -115,6 +115,16 @@ prepended with an '0x' to differentiate them as base-16.
 22 = 0x16
 23 = 0x17
 24 = 0x18
+25 = 0x19
+26 = 0x1A
+27 = 0x1B
+28 = 0x1C
+29 = 0x1D
+30 = 0x1E
+31 = 0x1F
+32 = 0x20
+33 = 0x21
+34 = 0x22
 ```
 
 To convert A1 from hexadecimal to decimal, we use the same formula as above:
@@ -153,7 +163,6 @@ Add the sums together to get 61440 + 512 + 48 + 12 = 62012
 ## Write a fuction that converts hex to decimal (20min)
 
 ## Lecture Part 3
->>>>>>> 068e39f9864dacf5a348aadb94b67acf4110ead6
 
 ### Bytes, kilobytes, megabytes, gigabytes, terabytes
 
@@ -199,9 +208,10 @@ let binNum = parseInt('10110', 2);      // 22
 let binStr = Number(binNum).toString(2);   // '10110'
 ```
 
-
+```js
 let num = parseInt('0xa1', 16);      // 161
 let str = Number(num).toString(16);  // 'a1'
+```
 
 
 ## Binary Extra Practice
