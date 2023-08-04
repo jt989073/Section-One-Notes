@@ -69,7 +69,8 @@ const str2 = '0x42'
 const str3 = '0x43'
 const str4 = '0x44'
 const str5 = '0x45'
-console.log(String.fromCharCode(str1))
+const someDec = hexToDecimal(str1)
+console.log(String.fromCharCode(someDec))
 console.log(String.fromCharCode(str2))
 console.log(String.fromCharCode(str3))
 console.log(String.fromCharCode(str4))
