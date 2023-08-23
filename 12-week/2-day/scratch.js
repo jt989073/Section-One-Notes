@@ -77,32 +77,63 @@ const adjList = {
     6: []
 }
 
-function aShortestPath(start, end) {
-  // your code here
-  const queue = [[start]]
-  const visited = new Set([start])
-  const newArr = []
+// function aShortestPath(start, end) {
+//   // your code here
+//   const queue = [[start]]
+//   const visited = new Set([start])
+//   const newArr = []
 
-  while(queue.length){
-    const path = queue.shift()
-    const curr = path[path.length - 1]
-    // solution for degrees of seperation
-    // if(curr === end) return path.length - 1
+//   while(queue.length){
+//     const path = queue.shift()
+//     const curr = path[path.length - 1]
+//     // solution for degrees of seperation
+//     // if(curr === end) return path.length - 1
     
-    // solution for aShortestPath
-    if(curr === end) return path
+//     // solution for aShortestPath
+//     if(curr === end) return path
 
-    const neighbors = adjList[curr]
+//     const neighbors = adjList[curr]
+//     neighbors.forEach(neighbor => {
+//         // if(neighbor === target) newArr.push(neighbor)
+//         if(!visited.has(neighbor)){
+//             visited.add(neighbor)
+//             queue.push([...path, neighbor])
+//         }
+//     })
+//   }
+//   return newArr.length
+// }
+
+function aShortestPathRecursive(queue, visited, end) {
+    if (queue.length === 0) {
+      return []; // No more paths to explore
+    }
+  
+    const path = queue.shift();
+    const curr = path[path.length - 1];
+  
+    // solution for aShortestPath
+    if (curr === end) {
+      return path;
+    }
+  
+    const neighbors = adjList[curr];
     neighbors.forEach(neighbor => {
-        // if(neighbor === target) newArr.push(neighbor)
-        if(!visited.has(neighbor)){
-            visited.add(neighbor)
-            queue.push([...path, neighbor])
-        }
-    })
+      if (!visited.has(neighbor)) {
+        visited.add(neighbor);
+        queue.push([...path, neighbor]);
+      }
+    });
+  
+    return aShortestPathRecursive(queue, visited, end);
   }
-  return newArr.length
-}
+  
+  function aShortestPath(start, end) {
+    const queue = [[start]];
+    const visited = new Set([start]);
+  
+    return aShortestPathRecursive(queue, visited, end);
+  }
 
 console.log("First Test:");
 console.log(aShortestPath(1, 3)); // -> [ 1, 2, 3 ] (One possible solution)
