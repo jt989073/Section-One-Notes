@@ -43,9 +43,9 @@ function islandSize(row, col, graph) {
     console.log(curr)
     const currentRow = curr[0]
     const currentCol = curr[1]
-
+    
     // DO THE THING (increment size by 1)
-  size++
+    if(graph[currentRow][currentCol] === 1) size++
 
     // Then push all the UNVISITED neighbors on top of the stack
     // and mark them as visited
