@@ -1,0 +1,12 @@
+{
+    "name": "semantic-html",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Semantic HTML Walkthrough",
+    "scripts": {
+        "test": "cypress run --spec 'cypress/integration/test.spec.js'"
+    },
+    "dependencies": {},
+    "author": "curriculum@appacademy.io",
+    "license": "ISC"
+}
