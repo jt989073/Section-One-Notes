@@ -1,8 +1,8 @@
 A CSS selector applies styles to a specific DOM element or elements. A selector can be any of the following basic types:
 
 - Type selectors -- matches elements by node name (e.g. div, li, a, p)
-- Class selectors -- matches elements by class name (e.g. <button class=“active”>)
-ID selectors -- matches elements by ID name (e.g. <div id=”list-1”>)
+- Class selectors -- matches elements by class name (e.g. button class=“active” />)
+- ID selectors -- matches elements by ID name (e.g. div id=”list-1”>)
 - Universal selectors -- matches elements of any type (e.g. *)
 - Attribute selectors -- matches elements based on the presence or value of a given attribute (e.g. a[title] matches all a elements with a title attribute)
 
@@ -11,6 +11,7 @@ ID selectors -- matches elements by ID name (e.g. <div id=”list-1”>)
 /* Type selector */
 div {
   background-color: #000000;
+  color: red
 }
 
 /* Class selector */
