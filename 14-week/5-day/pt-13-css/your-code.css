@@ -1,0 +1,63 @@
+/* Your code here */
+
+/* problem 1 */
+body{
+    background-color: #EFEFEF;
+}
+fieldset{
+    background: white;
+}
+
+/* problem 2 */
+.blue-box,
+.orange-box{
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.blue-box{
+    background-color: blue;
+    /* position: relative;
+    top: 40px; */
+}
+.orange-box{
+    background-color: orange;
+    /* position: relative;
+    bottom: 40px; */
+}
+
+.outer-layer-2{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+/* problem 3  */
+.outer-layer-3  p + p{
+    color: orange;
+}
+
+/* problem 4 */
+.outer-layer-4{
+    /* border: 1.5px solid blue; */
+    box-shadow: 0 0 4px rgba(0, 0, 255, .6);
+}
+
+/* problem 5 */
+
+.outer-layer-5{
+    /* overflow: auto; */
+    /* overflow-y: scroll; */
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* .uppercase.bold{
+    font-family: 'Courier New', Courier, monospace;
+} */
+
+
+.bold.uppercase{
+    font-family: 'Courier New', Courier, monospace;
+}

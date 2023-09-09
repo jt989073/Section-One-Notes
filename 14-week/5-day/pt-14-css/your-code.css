@@ -1,0 +1,23 @@
+/* Your code here */
+.outer-layer-1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* .outer-layer-2{
+    grid-template-areas: 
+    ". a a a a"
+    ". . . . ."
+    ;
+}
+
+.inner-layer-2{
+    grid-area: a;
+} */
+
+.inner-layer-2{
+    grid-column: span 4 / 6;
+    /* grid-column-start: 2;
+    grid-column-end: 6; */
+}
