@@ -58,3 +58,45 @@ meaning all you need to deal with a request is fully contained in that request,
 however it also means that you cannot use the request/reponse cycle to manage
 persistency. Information like user information, whether someone is logged in,
 and saved settings, all need to be managed seperately from the request/response cycle.
+
+# Understanding the Request and Response Cycle
+
+## Introduction
+In web development, understanding the request and response cycle is fundamental. It's the process that underlies every interaction between a user's web browser and a web server. We will dive into the details of this cycle, exploring how requests are made, processed, and responses are generated.
+
+## Key Components
+
+### 1. Client
+The client, typically a web browser, initiates the request-response cycle. Users interact with web applications through the client, issuing requests for web resources such as HTML pages, images, or data.
+
+### 2. DNS Resolution
+Before making a request, the client needs to resolve the domain name (e.g., www.example.com) into an IP address using Domain Name System (DNS) servers. This step allows the client to locate the web server.
+
+### 3. HTTP Request
+Once the client knows the server's IP address, it constructs an HTTP (Hypertext Transfer Protocol) request. This request includes:
+- The HTTP method (e.g., GET, POST).
+- The URL (Uniform Resource Locator) specifying the resource's location.
+- Headers with information like user-agent, accepted content types, and more.
+- Optional request body for methods like POST or PUT.
+
+### 4. Web Server
+The web server receives the HTTP request and processes it. This includes:
+- Parsing the request.
+- Routing the request to the appropriate application or endpoint.
+- Handling authentication and authorization if required.
+- Executing the requested action.
+
+### 5. Application Logic
+In many cases, the web server delegates the request to an application. The application logic generates dynamic content, interacts with databases, or performs other processing based on the request parameters.
+
+### 6. HTTP Response
+After processing the request, the web server generates an HTTP response. This response includes:
+- A status code (e.g., 200 for success, 404 for not found, many more).
+- Response headers containing metadata.
+- The response body containing the requested content (HTML, JSON, etc.).
+
+### 7. Transmission
+The response is sent back to the client over the network, following the same IP address resolution process.
+
+### 8. Rendering
+The client (web browser) receives the response and renders the web page or processes the data. It may issue additional requests for external resources like CSS, JavaScript, or images.
