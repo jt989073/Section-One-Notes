@@ -13,6 +13,7 @@
   - `GET /posts/new`
 - Create a new user
   - `POST /users`
+  -  `POST /signup`
 - Log In
   - `POST /users/login`
   - `POST /login`
@@ -22,7 +23,7 @@
   - `POST /logout`
   - `POST /session/delete`
 - Access the comments for a post page
-  - `GET /posts/:postId/comments`
+  - `GET /posts/:postId/comments` (:postId the colon tells me this is going to be a changing variable)
 - Access the create page for a post's comment
   - `GET /posts/:postId/comments/new`
 - Access the edit page for a comment
