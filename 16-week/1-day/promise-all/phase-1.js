@@ -32,14 +32,15 @@ function workout() {
   //   .then(liftWeights)
   //   .then(() => console.log("done working out"))
   //   .catch((err) => console.log(err));
-
-   return Promise.all([
-    stretch(),
-    runOnTreadmill(),
+  Promise.all([
+    stretch(), 
+    runOnTreadmill(), 
     liftWeights()
-  ]).then(() => console.log('done working out'))
+  ])
+  .then(() =>
+    console.log("done working out")
+  );
 }
-
 
 /* ============================ TEST YOUR CODE ============================
 
@@ -47,10 +48,9 @@ Run the file (`node phase-1.js`) and check your output against the expected
 output.
 */
 
-
 workout();
-  // should print out the following:
-    // done running on treadmill
-    // done stretching
-    // done lifting weights
-    // done working out
+// should print out the following:
+// done running on treadmill
+// done stretching
+// done lifting weights
+// done working out
