@@ -41,8 +41,14 @@ const removeFirst = document.getElementById("remove-first");
 removeFirst.addEventListener("click", () => {
   /*-------------------- Select the first dog card --------------------- */
   // Your code here
+  const firstDog = document.querySelector('li')
   /*-------------------- Remove the first dog card --------------------- */
   // Your code here
+  if(firstDog){
+    firstDog.remove()
+  } else {
+    console.log('no dogs left to remove')
+  }
 });
 
 /************************** REMOVE LAST DOG BUTTON ***************************/
@@ -50,6 +56,14 @@ const removeLast = document.getElementById("remove-last");
 removeLast.addEventListener("click", () => {
   /*-------------------- Select the last dog card ----------------------- */
   // Your code here
+  const allDogs = document.querySelectorAll('li')
+  let lastDog
+  if(allDogs.length > 0) lastDog = allDogs[allDogs.length - 1]
   /*-------------------- Remove the last dog card ----------------------- */
   // Your code here
+  if(lastDog){
+    lastDog.remove()
+  } else {
+    console.log('no dogs left to remove')
+  }
 });
