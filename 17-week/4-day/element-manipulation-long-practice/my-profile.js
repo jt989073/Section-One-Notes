@@ -22,6 +22,7 @@ window.onload = () => {
     "My favorite place to get lunch is Chipotle.",
     "On the weekends, I play flag football."
   ]
+  
   myDetailsArr.forEach(detail => {
     const li = document.createElement('li');
     li.setAttribute("class", "details");
