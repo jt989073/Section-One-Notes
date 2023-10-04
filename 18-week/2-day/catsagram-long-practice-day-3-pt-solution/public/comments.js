@@ -101,7 +101,6 @@ const createComment = (commentText) => {
     deleteButton.addEventListener('click', e => {
         // Remove comment from browser storage
         removeCommentFromStore(newComment);
-
         // Remove comment from HTML DOM
         newCommentContainer.remove();
     });
