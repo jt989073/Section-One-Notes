@@ -149,7 +149,6 @@ const removeAllCommentsFromStore = () => {
 export const resetComments = () => {
     const comments = document.querySelector(".comments");
     Array.from(comments.children).forEach(child => child.remove());
-
     // Remove all comments from browser storage
     removeAllCommentsFromStore();
 };
