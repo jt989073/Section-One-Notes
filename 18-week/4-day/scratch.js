@@ -7,16 +7,18 @@ document.addEventListener('DOMContentLoaded', (e) => {
       console.log(e.currentTarget.className); // blue
     });
   
-    const red = document.getElementById('inner');
-    red.addEventListener('click', (e) => {
-      e.stopPropagation();
-      console.log('hello');
-      // clicking on red no longer does anything
-    });
+    // const red = document.getElementById('inner');
+    // red.addEventListener('click', (e) => {
+    //   e.stopPropagation();
+    //   console.log('hello');
+    //   console.log(e.target.className) // red
+    //   console.log(e.currentTarget.className); // red
+    //   // clicking on red no longer bubbles up to bluee
+    // });
   
-    const check = document.getElementById('unclickable');
-    check.addEventListener('click', (e) => {
-      e.preventDefault();
-    });
+    // const check = document.getElementById('unclickable');
+    // check.addEventListener('click', (e) => {
+    //   e.preventDefault();
+    // });
   });
   
