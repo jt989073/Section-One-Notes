@@ -25,7 +25,7 @@ To get started with Express.js, you need to install it and create a basic applic
 
 1. Install Express.js using npm:
    ```bash
-   npm install express --save
+   npm install express
 
 
 # Coding In The Fast Lane - Express!
@@ -138,7 +138,7 @@ console.log(req.params.city) // Seattle
 - res.json() - send JSON response
 
 ```js
-res.status(200);
+res.status(200); // equivelent to res.statusCode = 200
 
 res.json({ some: 'data' });
 // or
