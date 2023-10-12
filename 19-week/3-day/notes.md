@@ -28,6 +28,10 @@ To get Express to use this function, we can pass it directly to a route handler
 ```js
 app.get('/', myMiddleware);
 
+app.get('/', (req, res) => {
+    // handling the request
+})
+
 // we can also continue to handle the request within the same handler
 
 app.get('/', myMiddleware, (req, res) => {
@@ -63,7 +67,8 @@ const mid1 = (req, res, next) => {
 
 const mid2 = (req, res, next) => {
   console.log("Hey I'm mid2!!");
-  next();
+  // next(); if next is called we would need another middleware to handle sending the request
+  res.send('This is the / response')
 };
 
 app.get('/', mid1, mid2);
@@ -196,6 +201,15 @@ app.post(...)
 
 app.delete(...)
 
+
+// this is bad because they are named incorrectly by order order is always error, request, response, next
+// app.use((req, res, next, err) => {
+  // -------- req is actually error, res is actually req, next is actually res, err is actually next ---------- // 
+//   console.log(err)
+//   res.status(err.status || 500)
+//   res.send('Whoops! Some error happened I guess?')
+// })
+
 app.use((err, req, res, next) => {
   console.log(err)
   res.status(err.status || 500)
@@ -258,6 +272,25 @@ Express reads the file from top to bottom and applies this middleware checklist:
 5. Restart from step 3 until a response is sent
 
 The key here is standard vs error middleware. Express will only ever use standard middleware until an error is thrown. From there, error middleware is used as long as next is called with an error - `next(err)`. If next is called normally, the next standard middleware is called, including route handlers.
+
+
+```js
+app.get('/hi', (req, res) => {
+  res.send('Hi there!');
+});
+
+// This is throwing the error (notice no 'err' parameter)
+app.use((req, res, next) => {
+  const myErr = new Error("We didn't find that resource");
+  next(myErr)
+});
+
+// This is an error handler
+app.use((err, req, res, next) => {
+  console.log(err.message); // We didn't find that resource // this comes from error handler above
+  res.send('Error: Never got to say hi :( ');
+});
+```
 
 ---
 
