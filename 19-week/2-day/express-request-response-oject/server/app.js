@@ -32,7 +32,7 @@ app.get('/version', (req, res) => {
  *  combined with the id sent as a route parameter in the url
  */
 // Your code here 
-app.get('/viewers/:id', (req, res) => {
+app.get('/viewers/:id', (req, res, next) => {
     res.json({
         id: req.params.id,
         firstName: 'James',
