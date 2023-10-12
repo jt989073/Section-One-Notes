@@ -247,11 +247,15 @@ If we want our error handler to actually handle something, we have to manually t
 ```js
 app.get('/hi', (req, res) => {
   res.send('Hi there!');
+  // console.log('something')
 });
 
 // This is throwing the error (notice no 'err' parameter)
 app.use((req, res, next) => {
-  throw new Error("We didn't find that resource");
+  // const err = new Error("We didn't find that resource");
+  // err.statusCode = 404
+  // next(err)
+  throw new Error('we didnt find that resource')
 });
 
 // This is an error handler
