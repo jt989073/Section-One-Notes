@@ -1,4 +1,4 @@
-# Environment Variables (.env), Static Files, and Middleware
+# Environment Variables (.env), Static Files
 
 ## Environments - looking for a change in scenery
 
@@ -44,7 +44,7 @@ Simplest (and worst) way is to throw it right before your command in the termina
 ```md
 # Runs app.js with process.env.password set to "TriggerBoy"
 
-PASSWORD=MomoLover node app.js
+PASSWORD=TriggerBoy node app.js
 
 # Runs app.js with process.env.password set to "TriggerBoy" and process.env.port set to 3200
 
