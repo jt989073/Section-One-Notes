@@ -42,7 +42,7 @@
   - Does it make sense why we do something when we do it?
   - Are we comfortable finding the syntax for how to do something?
   - Heavily lean on your readings to guide you
-- Practice makes perfect, Bonus Practice makes a passing exam score
+- Practice makes perfect
 
 ## CREATE/DROP
 
@@ -121,5 +121,4 @@ WHERE name = 'Max'
 ## Today
 
   - Practice reading .sql Files
-  - sql and express practice
   - basic sql long practice
