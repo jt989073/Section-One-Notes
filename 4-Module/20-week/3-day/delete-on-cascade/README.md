@@ -1,4 +1,4 @@
-cd # Practice: DELETE CASCADE
+# Practice: DELETE CASCADE
 
 Now, it's time to practice the effects of `ON DELETE CASCADE`.
 

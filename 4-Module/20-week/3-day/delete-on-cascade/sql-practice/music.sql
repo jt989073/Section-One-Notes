@@ -14,7 +14,6 @@ CREATE TABLE musicians (
   FOREIGN KEY (band_id) REFERENCES bands(id) ON DELETE CASCADE
 );
 
-
 INSERT INTO bands
 VALUES (1, 'The Falling Box'),
   (2, 'America The Piano'),

@@ -4,8 +4,9 @@
 
 -- SELECT * FROM albums WHERE band_id IN (1,3,4);
 
+
 -- SELECT * FROM albums WHERE title LIKE 'The%';
 
--- SELECT * FROM albums ORDER BY num_sold DESC LIMIT 2;
+SELECT * FROM albums ORDER BY num_sold DESC LIMIT 2;
 
 SELECT * FROM albums ORDER BY num_sold DESC LIMIT 2 OFFSET 2;
