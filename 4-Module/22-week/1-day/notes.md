@@ -105,7 +105,7 @@ class Job extends Model {
 // Book Model File
 class Book extends Model {
   static associate(models) {
-    Book.belongsToMany(models.Reader, { through: models.BookReader });
+    Book.belongsToMany(models.Reader, { through: models.BookReader, foreignKey: bookId, otherKey: readerId });
   }
 }
 
