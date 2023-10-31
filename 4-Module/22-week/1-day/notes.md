@@ -16,7 +16,7 @@ Like with SQL, reference is made on the migration with the FK, not the PK
 userId: {
   type: Sequelize.INTEGER,
   references: {
-    model: 'Users', // the TABLE name, not Model name
+    model:'Users', // the TABLE name, not Model name
     key: 'id', // the column on the other Table
   },
 	onDelete: 'CASCADE'
@@ -105,7 +105,8 @@ class Job extends Model {
 // Book Model File
 class Book extends Model {
   static associate(models) {
-    Book.belongsToMany(models.Reader, { through: models.BookReader, foreignKey: bookId, otherKey: readerId });
+    Book.belongsToMany(models.Reader, { through: models.BookReader, foreignKey: bookId, otherKey: readerId
+     });
   }
 }
 
