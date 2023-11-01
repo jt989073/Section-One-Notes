@@ -53,7 +53,7 @@ Sequelize creates the same method, except the model name is plural!
 const person = await Person.findOne({ where: { id } });
 
 // finding all the Job instances that the person has
-const allJobsForAPerson = await Person.getJobs();
+const allJobsForAPerson = await person.getJobs();
 ```
 
 ## `include`
