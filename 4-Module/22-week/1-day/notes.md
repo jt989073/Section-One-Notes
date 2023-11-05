@@ -1,4 +1,4 @@
-# Relationship problems are complicated...
+# Relationships problems are complicated...
 
 ## Sequelize Foreign Keys - Migrations
 
@@ -16,7 +16,7 @@ Like with SQL, reference is made on the migration with the FK, not the PK
 userId: {
   type: Sequelize.INTEGER,
   references: {
-    model:'Users', // the TABLE name, not Model name
+    model: 'Users', // the TABLE name, not Model name
     key: 'id', // the column on the other Table
   },
 	onDelete: 'CASCADE'
@@ -35,8 +35,7 @@ For a many-to-many, it's the exact same syntax, except on the joins table
 
 Before we get into syntax, we have to understand how these relationships connect to each other
 
-[Intro to Associations](https://open.appacademy.io/learn/js-py---pt-mar-2022-online/week-22---express-and-sequelize-pt--ii/intro-to-associations)
-is such a good demonstration of how these associations work
+Intro to Associations is such a good demonstration of how these associations work
 
 Quick Reference:
 
@@ -105,8 +104,7 @@ class Job extends Model {
 // Book Model File
 class Book extends Model {
   static associate(models) {
-    Book.belongsToMany(models.Reader, { through: models.BookReader, foreignKey: bookId, otherKey: readerId
-     });
+    Book.belongsToMany(models.Reader, { through: models.BookReader });
   }
 }
 
