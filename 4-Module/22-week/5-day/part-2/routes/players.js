@@ -6,6 +6,7 @@ const { Player } = require('../db/models');
 router.get('/', async (req, res) => {
   let { firstName, number } = req.query;
 
+
   const where = {};
   if (firstName && firstName !== '') {
     where.firstName = firstName[0].toLowerCase() + firstName.slice(1);
