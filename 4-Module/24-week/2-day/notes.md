@@ -129,6 +129,8 @@ If we want to add a scope, all we have to do is chain `.scope('scopeName')` off 
 await Cat.scope('isOrange').findAll();
 ```
 
+<!-- //testing -->
+
 These would return the same results!
 
 Now if we wanted this to be more programmatic, we could write a function instead
