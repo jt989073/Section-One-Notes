@@ -80,6 +80,8 @@ Just a function that returns JSX, think of it as returning HTML
 
 Function Components are named like JS Classes, Pascal Case
 
+You must return something from a function component. You cannot return undefined from a function component.
+
 ```jsx
 const NavBar = () => {
     return (
