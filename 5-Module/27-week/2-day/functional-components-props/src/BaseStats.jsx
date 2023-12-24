@@ -1,29 +1,30 @@
 import './BaseStats.css'
 
-export default function BaseStats({ stats: { hp, attack, defense, speed }, clicker }) {
+export default function BaseStats(props) {
+    console.log(props.children)
 
     return (
         <div className='base-stats'>
-            <button className="sp-stats" onClick={clicker}>
+            <button className="sp-stats" onClick={props.stats.clicker}>
                 Check Special Stats
             </button>
             <table >
                 <tbody>
                     <tr>
                         <td>Hit Points</td>
-                        <td>{hp}</td>
+                        <td>{props.stats.hp}</td>
                     </tr>
                     <tr>
                         <td>Attack</td>
-                        <td>{attack}</td>
+                        <td>{props.stats.attack}</td>
                     </tr>
                     <tr>
                         <td>Defense</td>
-                        <td>{defense}</td>
+                        <td>{props.stats.defense}</td>
                     </tr>
                     <tr>
                         <td>Speed</td>
-                        <td>{speed}</td>
+                        <td>{props.stats.speed}</td>
                     </tr>
                 </tbody>
             </table>
