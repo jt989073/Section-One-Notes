@@ -489,3 +489,28 @@ const reducer = (state = [], action) => {
 	else return state;
 };
 ```
+
+
+so we use switch case instead
+
+```js
+const reducer = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_CAT':
+            return [...state, action.payload];
+        case 'ADD_CATS':
+            return [...state, ...action.payload];
+        case 'REMOVE_CAT_BY_NAME':
+            const newState = state.filter((cat) => cat !== action.payload);
+            return newState;
+        case 'REMOVE_LAST_CAT':
+            const newState = [...state];
+            newState.splice(newState.length - 1, 1);
+            return newState;
+        case 'REMOVE_ALL_CATS':
+            return [];
+        default:
+            return state;
+    }
+};
+```
