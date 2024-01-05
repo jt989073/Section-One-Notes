@@ -240,7 +240,8 @@ Continuing our cat example, our `reducer` might look something like this
 const reducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_CAT':
-            return [...state, action.payload];
+            // state.push(action.payload) -- not doing this because this is mutating the store thats a no no
+            return [...state, action.payload]; // spread initial state and add action.payload
         default:
             return state;
     }
