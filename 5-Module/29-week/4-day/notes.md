@@ -240,6 +240,7 @@ Continuing our cat example, our `reducer` might look something like this
 const reducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_CAT':
+            // state.push(action.payload) and then returning state // you never do this because this manipulates our store directly
             return [...state, action.payload];
         default:
             return state;
