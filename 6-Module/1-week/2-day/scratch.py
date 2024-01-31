@@ -1,46 +1,42 @@
-# print('hello'[:1:2])
+# print('hello'[0:2])
 # print('hello ' * 3)
 
 # word_1 = 'hello'
 # word_2 = 'world'
-# # format_sentence = '{0} {1}!'.format(word_1, word_2)
+# word_3 = '!!!'
+# format_sentence = 'hey this is a statement, {0} {1}{2}'.format(word_1, word_2, word_3)
+# print(format_sentence)
 
-# # print(format_sentence)
-
-# fstring_sentence = f'{word_1} this {word_2}!' 
-
-# print(fstring_sentence)
+# print(f'Hey this is a statement, {word_1} {word_2}{word_3}')
 
 # questions = 20
 # num_correct = 10
-
 # # score = f'You got {num_correct/questions:%}'
-# score = f'You got {num_correct/questions:.0%}'
+# score = f'You got {num_correct/questions:.2%}'
+# print(score)'
 
-# print(score)
+# print(20 / 6) # float division
+# print(20 // 6) # integer division
 
-# print(20 / 6)
+# my_num = 12
 
-# num = 20
+# my_num -= 1
 
-# num -= 1
+# print(my_num)
 
-# print(num)
+# function myFunction(){}
 
-
-
-def james_function(my_string):
-    return my_string.upper()
-# print(james_function('james'))
-
-# Write your function, here.
-def is_palindrome(word):
-  new_word = ''.join(reversed(word))
-  print(reversed(new_word))
-  return new_word == word
+# def my_function(word):
+#   return word.upper()
 
 
-print(is_palindrome("kayak")) # True
-print(is_palindrome("app"))  # False
-print(is_palindrome("racecar")) # True
-print(is_palindrome("valid")) # False
+# print(my_function('james'))
+
+
+
+
+# def my_other_func(something):
+#   something + '@@'
+
+
+print('james'[0::3])
