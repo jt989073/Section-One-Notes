@@ -8,6 +8,8 @@ Duck typing is a philosophy of type checking that cares less about whether
 something has the correct type, but whether something can use a particular
 method.
 
+Unlike statically-typed languages where the type of a variable is explicitly declared, Python is dynamically typed, meaning the type of a variable is determined at runtime. Duck typing takes advantage of this dynamic typing by allowing objects to be used based on their behavior, rather than requiring them to inherit from a specific class or interface.
+
 ## [EAFP](https://docs.python.org/3/glossary.html#term-EAFP) vs [LBYL](https://docs.python.org/3/glossary.html#term-LBYL)
 
 ### Easier to ask for forgiveness than permission

@@ -1,17 +1,17 @@
 class Dog:
-    def sound(self):
+    def make_sound(self):
         return "Woof!"
 
 class Cat:
-    def sound(self):
+    def make_sound(self):
         return "Meow!"
 
 class Duck:
     def sound(self):
         return "Quack!"
 
-def make_sound(animal):
-    return animal.sound()
+    def make_sound(animal):
+        return animal.sound()
 
 # Using duck typing in function
 dog = Dog()
