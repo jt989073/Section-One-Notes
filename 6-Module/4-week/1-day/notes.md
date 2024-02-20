@@ -204,7 +204,7 @@ attribute_name = db.relationship(
 On Book model:
 ```py
 publishers = db.relationship(
-    "Book",
+    "Publisher",
     secondary=publishers_books,
     back_populates="books"
 )
@@ -213,7 +213,7 @@ publishers = db.relationship(
 On Publisher model:
 ```py
 books = db.relationship(
-    "Publisher",
+    "Book",
     secondary=publishers_books,
     back_populates="publishers"
 )
