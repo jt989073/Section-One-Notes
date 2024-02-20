@@ -144,12 +144,12 @@ These are very uncommon, so chances are you may never have to make one, but if y
 
 ```py
 # on the Book model
-author = db.relationship("Author", back_populates="books")
+author = db.relationship("Author", back_populates="books", uselist=False)
 ```
 
 ```py
 # on the Author model
-books = db.relationship("Book", back_populates="author", uselist=False)
+books = db.relationship("Book", back_populates="author")
 ```
 
 ---
@@ -167,7 +167,7 @@ We use a `db.Table` to make an association table.
 
 ### Creating an Association Table
 
-The first argument to `db.Table` will be the table name, and then the second argument will be `db.Model.metadata` because we sill want to inherit from the model parent class. Ather that each additional argument is a column. A typical association table only needs two columns—one for each of the two foreign keys.
+The first argument to `db.Table` will be the table name, and then the second argument will be `db.Model.metadata` because we sill want to inherit from the model parent class, each additional argument is a column. A typical association table only needs two columns—one for each of the two foreign keys.
 
 It does not need its own id column (this is different from Sequelize).
 
