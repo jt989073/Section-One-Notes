@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="feed_container">
+    {% for tweet in tweets %}
+    <div class="tweet">
+        <p>{{ tweet.author }} tweeted on {{ tweet.date }} ...</p>
+        <p>{{ tweet.tweet }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
