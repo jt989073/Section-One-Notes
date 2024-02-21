@@ -1,16 +1,18 @@
 from flask import Flask, render_template, redirect
 from .config import Config
-from .tweets import tweets
+# from .tweets import tweets
 import random
 from .form.form import TweetForm
-# !!START SILENT
 from datetime import date
-# !!END
+from .models import db
+from .models.Tweet import Tweet
 
 
 app = Flask(__name__)
 
 app.config.from_object(Config)
+
+db.init_app(app)
 
 
 @app.route("/")
@@ -18,8 +20,9 @@ def index():
     """
     Landing page, displays a random tweet
     """
-    tweet = random.choice(tweets)
-    return render_template("index.html", tweet=tweet)
+    # tweet = random.choice(tweets)
+    tweets = Tweet.query.get(random.choice(range(len(Tweet.query.all()))))
+    return render_template("index.html", tweet=tweets)
 
 
 @app.route("/feed")
@@ -27,6 +30,7 @@ def feed():
     """
     Displays the feed page showing all tweets
     """
+    tweets = Tweet.query.all()
     return render_template('feed.html', tweets=tweets)
 
 
@@ -41,17 +45,16 @@ def new_tweet_form():
     # !!START SILENT
     if form.validate_on_submit():
         new_tweet = {
-            'id': len(tweets),
             'author': form.data['author'],
             'tweet': form.data['tweet'],
             'date': date.today(),
             'likes': 0,
         }
-        print(new_tweet)
-        tweets.append(new_tweet)
+        new_tweet = Tweet(**new_tweet)
+        db.session.add(new_tweet)
+        db.session.commit()
         return redirect("/feed", 302)
 
     if form.errors:
         return form.errors
-    # !!END
     return render_template("new_tweet.html", form=form)

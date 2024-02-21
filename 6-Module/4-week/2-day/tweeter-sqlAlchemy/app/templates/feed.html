@@ -5,12 +5,7 @@
     {% for tweet in tweets %}
     <div class="tweet">
         <p>{{ tweet.author }} tweeted on {{ tweet.date }} ...</p>
-        <p>"{{ tweet.tweet }}"</p>
-        {% if tweet.likes > 525000 %}
-            <p style="color:orange ">Likes: {{ tweet.likes / 1000}}k</p>
-        {% else %}
-            <p>Likes: {{ tweet.likes / 1000}}k</p>
-        {% endif %}
+        <p>{{ tweet.tweet }}</p>
     </div>
     {% endfor %}
 </div>
