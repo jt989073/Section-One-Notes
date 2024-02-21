@@ -1,3 +1,2 @@
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from .Tweet import Tweet, db
+from .db import db

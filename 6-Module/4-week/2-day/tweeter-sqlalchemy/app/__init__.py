@@ -4,8 +4,8 @@ from .config import Config
 import random
 from .form.form import TweetForm
 from datetime import date
-from app.models import db
-from app.models.Tweet import Tweet
+from app.models import db, Tweet
+# from app.models.Tweet import Tweet
 
 
 

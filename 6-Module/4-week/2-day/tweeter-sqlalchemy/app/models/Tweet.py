@@ -1,5 +1,4 @@
-from app.models import db
-
+from .db import db
 class Tweet(db.Model):
     __tablename__  = 'tweets'
     
