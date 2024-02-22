@@ -1,11 +1,11 @@
 from flask import Flask, render_template, redirect
+from flask_login import current_user, login_user, logout_user, LoginManager, login_required
+from flask_login import LoginManager
 from .config import Config
-# from .tweets import tweets
 import random
-from .form.form import TweetForm
+from .form.form import TweetForm, LoginForm
 from datetime import date
-from app.models import db, Tweet
-# from app.models.Tweet import Tweet
+from .models import db, Tweet, User
 
 
 
@@ -13,6 +13,14 @@ app = Flask(__name__)
 
 app.config.from_object(Config)
 db.init_app(app)
+
+login = LoginManager(app)
+login.login_view='session.login'
+
+@login.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+
 
 
 @app.route("/")
@@ -41,7 +49,6 @@ def new_tweet_form():
     validates and creates a new Tweet on POST requests
     """
     form = TweetForm()
-    # !!START SILENT
     if form.validate_on_submit():
         new_tweet = {
             'author': form.data['author'],
@@ -56,5 +63,24 @@ def new_tweet_form():
 
     if form.errors:
         return form.errors
-    # !!END
     return render_template("new_tweet.html", form=form)
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if current_user.is_authenticated:
+        return redirect('/')
+    form = LoginForm()
+    if form.validate_on_submit():
+        n = form.user_name.data
+        user = User.query.filter(User.user_name == n).first()
+        if not user or not user.check_password(form.password.data):
+            return redirect('/login')
+        login_user(user)
+        return redirect('/feed')
+    return render_template("login.html", form=form)
+
+@app.route('/logout', methods=['POST'])
+def logout():
+    logout_user()
+    return redirect('/login')
