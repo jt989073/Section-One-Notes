@@ -11,6 +11,8 @@ class User(db.Model, UserMixin):
     user_name = db.Column(db.String(100), nullable=False)
     hashed_password = db.Column(db.String(255), nullable=False)
     
+    tweets = db.relationship('Tweet', back_populates='user', cascade='all, delete')
+    
 
     @property
     def password(self):
