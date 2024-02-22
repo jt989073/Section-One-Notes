@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect
 from flask_login import current_user, login_user, logout_user, LoginManager, login_required
 from flask_login import LoginManager
+from flask_migrate import Migrate
 from .config import Config
 import random
 from .form.form import TweetForm, LoginForm
@@ -12,8 +13,8 @@ from .models import db, Tweet, User
 app = Flask(__name__)
 
 app.config.from_object(Config)
-
 db.init_app(app)
+Migrate(app, db)
 login = LoginManager(app)
 login.login_view='session.login'
 
@@ -28,7 +29,8 @@ def index():
     Landing page, displays a random tweet
     """
     # tweet = random.choice(tweets)
-    tweets = Tweet.query.get(random.choice(range(len(Tweet.query.all()))))
+    tweets = Tweet.query.all()
+    tweets = random.choice(tweets)
     return render_template("index.html", tweet=tweets)
 
 
@@ -38,7 +40,20 @@ def feed():
     Displays the feed page showing all tweets
     """
     tweets = Tweet.query.all()
-    return render_template('feed.html', tweets=tweets)
+    new_tweets = []
+    for old_tweet in tweets:
+        user = User.query.get(old_tweet.user_id)
+        user_name = user.user_name
+        new_dict = {
+            'tweet': old_tweet.tweet,
+            'date': old_tweet.date,
+            'likes': old_tweet.likes,
+            'id': old_tweet.id,
+            'user_name': user_name
+        }
+        new_tweets.append(new_dict)
+        print(new_dict)
+    return render_template('feed.html', tweets=reversed(new_tweets))
 
 
 
@@ -51,10 +66,10 @@ def new_tweet_form():
     form = TweetForm()
     if form.validate_on_submit():
         new_tweet = {
-            'author': form.data['author'],
             'tweet': form.data['tweet'],
             'date': date.today(),
             'likes': 0,
+            'user_id': current_user.id
         }
         new_tweet = Tweet(**new_tweet)
         db.session.add(new_tweet)

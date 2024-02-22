@@ -11,6 +11,8 @@ flask-wtf = "*"
 sqlalchemy = "*"
 flask-sqlalchemy = "*"
 flask-login = "*"
+alembic = "*"
+flask-migrate = "*"
 
 [dev-packages]
 

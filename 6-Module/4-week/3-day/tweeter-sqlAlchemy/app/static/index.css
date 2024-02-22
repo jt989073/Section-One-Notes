@@ -1,5 +1,5 @@
 body {
-    background-color: navy;
+    background-color: salmon;
     color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@ body {
 
 a {
     text-decoration: none;
-    color: gold;
+    color: white;
     margin: 5px;
 }
 
@@ -48,7 +48,7 @@ p:nth-child(2) {
 
 button {
     border: none;
-    background-color: navy;
-    color: gold;
+    background-color: salmon;
+    color: white;
     cursor: pointer;
 }

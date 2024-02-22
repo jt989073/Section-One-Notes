@@ -6,7 +6,6 @@ from wtforms.fields import (
 )
 
 class TweetForm(FlaskForm):
-    author = StringField("Author", validators=[DataRequired()])
     tweet = StringField("Tweet", validators=[DataRequired()])
     submit = SubmitField("Create Tweet")
     
