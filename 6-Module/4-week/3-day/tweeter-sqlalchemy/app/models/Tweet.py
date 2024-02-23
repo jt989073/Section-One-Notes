@@ -9,3 +9,18 @@ class Tweet(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('Users.id'))
     
     user = db.relationship('User', back_populates='tweets')
+    user_likes = db.relationship('User', back_populates='tweet_likes', secondary='Likes')
+    
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'tweet': self.tweet,
+            'date': self.date,
+            'likes': len([like for like in self.user_likes]),
+            'user': self.user.to_dict()
+        }
+        
+    def card_to_dict(self):
+        return {
+            'tweet': self.tweet
+        }

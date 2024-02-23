@@ -30,8 +30,8 @@ def index():
     Landing page, displays a random tweet
     """
     tweet = random.choice(Tweet.query.all())
-    user = User.query.get(tweet.user_id)
-    return render_template("index.html", tweet=tweet, user=user)
+
+    return render_template("index.html", tweet=tweet.to_dict())
 
 
 @app.route("/feed")
@@ -40,18 +40,10 @@ def feed():
     Displays the feed page showing all tweets
     """
     tweets = Tweet.query.all()
-    new_tweets = []
-    for tweet in tweets:
-        user = User.query.get(tweet.user_id)
-        new_dict = {
-            'tweet': tweet.tweet,
-            'date': tweet.date,
-            'likes': tweet.likes,
-            'user_name': user.user_name 
-        }
-        new_tweets.append(new_dict)
-    return render_template('feed.html', tweets=reversed(new_tweets))
-
+    for i in range(len(tweets)):
+        tweets[i] = tweets[i].to_dict()
+        print(tweets[i])
+    return render_template('feed.html', tweets=reversed(tweets))
 
 
 @app.route("/new", methods=["GET", "POST"])

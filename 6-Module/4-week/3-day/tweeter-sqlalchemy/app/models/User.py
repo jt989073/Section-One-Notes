@@ -12,6 +12,7 @@ class User(db.Model, UserMixin):
     hashed_password = db.Column(db.String(255), nullable=False)
     
     tweets = db.relationship('Tweet', back_populates='user', cascade='all, delete')
+    tweet_likes = db.relationship('Tweet', back_populates='user_likes', secondary='Likes')
     
 
     @property
@@ -24,4 +25,10 @@ class User(db.Model, UserMixin):
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
+    
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'user_name': self.user_name
+        }
 
