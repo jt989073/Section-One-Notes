@@ -14,3 +14,4 @@ class LoginForm(FlaskForm):
     user_name = StringField("User Name", [DataRequired()])
     password = PasswordField("Password", [DataRequired()])
     submit = SubmitField("Login")
+

@@ -41,19 +41,22 @@ def feed():
     """
     tweets = Tweet.query.all()
     new_tweets = []
-    for old_tweet in tweets:
-        user = User.query.get(old_tweet.user_id)
-        user_name = user.user_name
-        new_dict = {
-            'tweet': old_tweet.tweet,
-            'date': old_tweet.date,
-            'likes': old_tweet.likes,
-            'id': old_tweet.id,
-            'user_name': user_name
-        }
-        new_tweets.append(new_dict)
-        print(new_dict)
-    return render_template('feed.html', tweets=reversed(new_tweets))
+    for i in range(len(tweets)):
+        # user = User.query.get(old_tweet.user_id)
+        # user_name = user.user_name
+        # new_dict = {
+        #     'tweet': old_tweet.tweet,
+        #     'date': old_tweet.date,
+        #     'likes': old_tweet.likes,
+        #     'id': old_tweet.id,
+        #     'user_name': user_name,
+        #     'id': old_tweet.id
+        # }
+        # new_tweets.append(new_dict)
+        # print(new_dict)
+        tweets[i] = tweets[i].to_dict()
+        print(tweets[i])
+    return render_template('feed.html', tweets=reversed(tweets))
 
 
 
