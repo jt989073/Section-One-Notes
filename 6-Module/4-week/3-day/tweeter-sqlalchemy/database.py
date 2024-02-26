@@ -20,6 +20,7 @@ with app.app_context():
         new_like2 = Like(user_id=1, tweet_id=old_tweet['id'])
         db.session.add(new_like)
         db.session.add(new_like2)
+       
         
     db.session.commit()
     
