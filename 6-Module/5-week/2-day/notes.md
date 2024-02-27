@@ -10,7 +10,7 @@
 
     - Containers: Containers are instances of images. They are isolated environments that run applications, ensuring consistency across different computing environments.
 
-    - Dockerfile: Dockerfile is a text file that contains instructions for building Docker images. It defines the environment and configuration of the application.
+    - Dockerfile: Dockerfile is a text file that contains instructions for building Docker images. It defines the environment and configuration of the application. (we are going to talk about this later on in the week.)
 
     - Docker Engine: Docker Engine is the runtime environment for containers. It manages container lifecycle, networking, storage, and other essential tasks.
 
